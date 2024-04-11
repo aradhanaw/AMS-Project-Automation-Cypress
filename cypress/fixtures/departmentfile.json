@@ -1,0 +1,16 @@
+[{
+    "departmentname":"Pianist",
+    "expected":"Success"
+  },
+  {
+    "departmentname":"Pianist",
+    "expected":"Department already exists"
+  },
+
+  {
+    "departmentname":"111",
+    "expected":"Please enter valid alphabets."
+  }
+     
+]
+  
