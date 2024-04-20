@@ -24,6 +24,8 @@
 // -- This will overwrite an existing command --
 // Cypress.Commands.overwrite('visit', (originalFn, url, options) => { ... })
 
+
+//custom command for login
 Cypress.Commands.add("login",()=>{
     Cypress.on('uncaught:exception', (err, runnable) => {
         // returning false here prevents Cypress from
@@ -40,7 +42,7 @@ Cypress.Commands.add("login",()=>{
 
 
 
-
+//custom command for login with session
 Cypress.Commands.add("sessionLogin",(username,password)=>{
   cy.session([username,password],()=>{
     cy.visit('/login')
@@ -54,6 +56,7 @@ Cypress.Commands.add("sessionLogin",(username,password)=>{
 })
 
 
+//custom command for logout
 Cypress.Commands.add("logout",()=>{
   cy.sessionLogin('admin','Adminadmin1!');
   cy.visit("/")
@@ -62,3 +65,5 @@ Cypress.Commands.add("logout",()=>{
 
 
 })
+
+
